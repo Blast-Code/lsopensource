@@ -776,13 +776,8 @@ void PartyInfoWnd::iwm_show()
 	RECT rcDrag = { 0, 0, GetWidth(), GetHeight() };
 	SetDragRect( rcDrag );
 
-#ifndef SRC_OVERSEAS
-	if( strcmp( g_MyInfo.GetPublicID().c_str(), "개발자B" ) == 0 || //Except Extracting Hangeul
-		strcmp( g_MyInfo.GetPublicID().c_str(), "개발자K" ) == 0 || //Except Extracting Hangeul
-		strcmp( g_MyInfo.GetPublicID().c_str(), "개발자L" ) == 0 || //Except Extracting Hangeul
-		strcmp( g_MyInfo.GetPublicID().c_str(), "개발자Q" ) == 0 || //Except Extracting Hangeul
-		strcmp( g_MyInfo.GetPublicID().c_str(), "개발자U" ) == 0 || //Except Extracting Hangeul
-		strcmp( g_MyInfo.GetPublicID().c_str(), "매니저X" ) == 0 )  //Except Extracting Hangeul
+#ifdef DEV_SPECTATE_BTN
+	if(g_App.IsMeDeveloper() ) 
 	{
 		ShowChildWnd( ID_DEVELOPER_ENTER );
 	}

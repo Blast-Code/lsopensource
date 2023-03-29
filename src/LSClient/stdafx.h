@@ -131,6 +131,7 @@
 	//#define USE_PACKDATA_BY_PRINCE //팩 사용(지도 및 RS)
 	#define LS_TIMEGATE_BY_PRINCE //타임게이트
 	#define LS_TIMEGATE_BY_PRINCE_DEBUG //타임게이트
+	#define DEV_SPECTATE_BTN //관람실
 
 #endif
 
